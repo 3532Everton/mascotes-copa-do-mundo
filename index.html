@@ -8,7 +8,7 @@
     <!-- Arquivo CSS -->
     <link rel="stylesheet" href="css/estilo_index.css">
     <!-- Arquivo JS -->
-
+    <script src="js/script.js" defer></script>
     <!-- titulo da página -->
     <title>mascote ofc</title>
 </head>
@@ -28,43 +28,46 @@
         <section class="apresentacao">
             <h2 class="apresentacao-titulo">Apresentação</h2>
             <p class="apresentacao-texto">
-                O trabalho realizado por aluno do 3º ano do CEM 04 de Ceilândia - Brasília-DF,
-                vem trazer curiosidades sobre os mascotes das <em>copas do mundo</em> entre os anos de <em>2006 á 2022</em>.
-                Vamos contar sobre o <strong>Goleo VI, Zakumi, Fuleco, Zabivaka e La´eeb</strong>
+                O trabalho realizado por aluno do 3º ano 'F' do CEM 04 de Ceilândia - Brasília-DF,
+                vem trazer curiosidades sobre os mascotes das <em>copas do mundo</em> dos anos de <em>2006 á 2022</em>.
+                Vamos contar sobre o <strong>Goleo VI, Zakumi, Fuleco, Zabivaka e La´eeb</strong>.
+                Já que estamos em época de copa do mundo, por que não conhecer alguns dos
+                queridos mascotes, não é mesmo?
             </p>
         </section>
         <!-- menu lateral -->
         <div class="menu-lateral">
-            <div class="menu">
-                <div class="menu-hamburguer">
+            <div class="menu" id="menu">
+                <div class="menu-hamburguer" id="menu-hamburguer">
                     <span class="hamburguer"></span>
                 </div>
                 <ul class="menu-lista">
                     <li class="menu-lista-item">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAGFBMVEUAAAD+AAD/zAAqAAP9yAH9zQL2AgD8KwBigjgcAAABCUlEQVR4nO3SsRGEAAzAsPDAs//G9HFFL43g8wwAAAAAAAAAAAAAAAAAAADARyfb/NnmYNOkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0qXnY5mKbH9vcbD4pTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClNSpPSpDQpTUqT0qQ0KU1Kk9KkNClN6gU4m9j/vkrH4gAAAABJRU5ErkJggg==" alt="" class="item-img">
-                        <p class="item-texto"></p>
+                        <p class="item-texto"> Alemanha - 2006</p>
                     </li>
                     <li class="menu-lista-item">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAMAAABVlWm8AAAAz1BMVEUAeEfhOS0ADIr///8AAAD/uRXM5Nrre3NVXbFVPgdmrpGIwKl3t513ljD1vblmkjMXEQKImyzrqhOZnynzsKuqrtiZntD4+/oFe0uwgA72thcOf1GZybUHekarfA7vtRjiQjdVpYQfiF2+3dCqoyazpiQaf0Irj2bX6uILFo/n6PT87u3jST375+Xpa2M3lW/HqiApgz/Trh0+iDvdsBvc3u8UH5Oy1sdTjTcUfkNlSQjCqiFGnXo2hjzV1+w+R6bxo53nY1mKkMk1P6JMVK2N+oLGAAAD6klEQVR4nO3dh1rUQBiF4fHfDWDHgl2Rxd47dhS9/2syC+u2TJJpycyck/8KfHO+51Fhi1LNt3d9VLkLL07BXAtfqclB9QE834z9xw52rX7wBAz80AmY+JU6A5uAmV9N9kETMPTDJmDsB03A3I+ZgI0fMQErP2ACln64BGz9aAnY+7EScPBDJeDkB0rAzY+TgKsfJQFnP0gCHn6IBNQXnyeQfwJq9zN1AqooHjAnUPoLvwQeb+ScwNTvmcCNcxkncOIvdi+SJjDzF8XDR5QJzP0dJPDyVWxd+y38XSRw9X5sX9st+xkTWPETJrDmp0tg3c+WQNXPlYD6ern6BIgSUOPtm8wJqPF4fJo4gamfOYFjP3ECMz9tAv/9+gS+wSew8GsTuHUePIElf00Cb70SqD6AtBJY8XeQwOsnaSew6u8igbNJJ7DuZ0ug4idLQOOvSeAuZAI6vz6BN5AJ6P08CdT4aRKo9ZMkUO/nSKDJz5BAo7+vBH7FS6DFr0/gUvAEfqfq1yfwLnwCm3Gu3d9TApHOwF+TwA+PB3Bbl0CUM/IDJ2Dmx03A1I+agLG/iwTuxNZb+cfb96oPoPBK4Hv0BGz8iAnY+fESsPTDJWDt7yKBjXhn7+8ggZjn4O8ggXjn4tcn8OF9bIvLufn1CVzJMAFHP0wCzn6QBNz9GAn4+BES8PIDJODpzz4BX3/uCfj7804ggD/rBIL4M04gjD/fBEL5c00gmD/TBAZ/oCPvP8vx1fD3XxB+ruOr4d+//vyMx1fD/3+px1fDz7+ox1fDz7+px1fD77/CjZ/nr8CDjc/z+2+c8ZWDn/z1L9yvfyJ//RvY+JZ+3Uugsx7fzo83vo0//Ovf448/Gt7/MLz/hXj8kZEfd/yRiT/4+x+14x9txTmn978Gfwv0zz8S6ZJ4//PR01j8Zj/6+C1++PEb/f2M//Ewpr7B38/416KOX+/nGL/WTzJ+jb+fj0BLYHzR+vv5/LMUxheNn2l8qfqpxpd1P9n4suZnG19W/P18/m1K48uyv5+PwE5qfFn4+/n868TGl7mfc3yZ+VnHlxM/7fgy9ROPX15P33+S5vjl9fL9N6mOLzo/0fhS9VONLxU/1/iy5mcbX1b9dOPLsp9wfFnyhx9/J/nxZe4P/xXIz/7GphldV99/vPMptszsuvn+60zGl2N/+O8/z2X88pTf+JP9nMcvTzGPXx71+OLlz3988fAjjC/ufojxxdUPMr44+lHGFyc/zvji4gcaX+z92vG3Yivcj3p8sfSjjS92frjxxcYPOL5Y+BHHF2M/5vhi6gcdX8z8sOOLkX8Pdnwx8E8OcMeXdj/0+OX9A2d8hgQyanEGAAAAAElFTkSuQmCC" alt="" class="item-img">
-                        <p class="item-texto"></p>
+                        <p class="item-texto"> África do Sul - 2010</p>
                     </li>
                     <li class="menu-lista-item">
                         <img src="https://cdn.awsli.com.br/1000x1000/1677/1677907/produto/83123394/ce4b2fd5a5.jpg" alt="" class="item-img">
-                        <p class="item-texto"></p>
+                        <p class="item-texto"> Brasil - 2014</p>
                     </li>
                     <li class="menu-lista-item">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAMAAABVlWm8AAAAD1BMVEX///8AOabVKx6qveGOMEuAx7gLAAAAoElEQVR4nO3PCQ0AMAwAoe7xr3k2lhw4YAYAAAAAAAAAAAAAAAAA+M5pm9Xm3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t+W/9+22W3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m3+bf5t/m31/wMJkK5SavsmOgAAAABJRU5ErkJggg==" alt="" class="item-img">
-                        <p class="item-texto"></p>
+                        <p class="item-texto"> Rússia - 2018</p>
                     </li>
                     <li class="menu-lista-item">
                         <img src="https://www.estudopratico.com.br/wp-content/uploads/2017/03/significado-da-bandeira-do-catar.jpg" alt="" class="item-img">
-                        <p class="item-texto"></p>
+                        <p class="item-texto"> Qatar - 2022</p>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- Seção de mascotes -->
         <section class="pagina-de-mascotes">Mascotes</section>
+        <div class="iniciar"></div>
     </main>
     <!-- Rodapé -->
     <footer class="rodape">

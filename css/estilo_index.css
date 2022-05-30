@@ -35,9 +35,9 @@ ul {
     top: -10%;
 }
 .corpo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    padding: 4rem;
+    align-items: start;
 }
 .apresentacao {
     display: flex;
@@ -45,28 +45,37 @@ ul {
     align-items: flex-start;
     gap: 10px;
     min-height: 8rem;
-    padding: 2em 4em;
+    padding: 2em 0 2em 4em;
     width: 100%;
+    grid-column: 1/3;
+    grid-row: 1;
 }
 .apresentacao-titulo {
     font-size: 22pt;
     color: #800e30;
     margin-left: 1.3em;
 }
+.apresentacao-texto::first-letter {
+    margin-left: 1.3em;
+}
 .menu-lateral {
-    width: 30%;
-    display: grid;
-    place-items: center;
+    color: #ffffff;
 }
 .menu {
     position: fixed;
-    /* top: 21.5rem; */
+    bottom: 11rem;
+    left: 3rem;
     display: flex;
     flex-direction: column;
     background: #f50950;
-    border-radius: 3rem;
+    border-radius: 25px;
+    width: 2.6rem;
     gap: 1rem;
     padding: 0.3rem;
+    transition: all .5s ease-in-out;
+}
+.ativo {
+    width: 15rem;
 }
 .menu-hamburguer {
     border: 2px solid #ffffff;
@@ -75,6 +84,7 @@ ul {
     border-radius: 50%;
     display: grid;
     place-items: center;
+    cursor: pointer;
 }
 .hamburguer {
     display: block;
@@ -95,34 +105,49 @@ ul {
     top: .2rem;
 }
 .hamburguer::before {
-    top: -.4rem;
+    top: -.34rem;
 }
 .menu-lista {
-    border-radius: 2rem;
     padding: 0;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    min-width: 2rem;
+    width: 100%;
+    overflow: hidden;
 }
 .menu-lista-item {
     display: flex;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    overflow: hidden;
     align-items: center;
+    min-width: 100%;
     justify-content: flex-start;
+    cursor: pointer;
 }
 .item-img {
     width: 2rem;
     height: 2rem;
+    border-radius: 50%;
     object-fit: cover;
 }
+.item-texto {
+    width: 200px;
+    text-align: center;
+}
 .pagina-de-mascotes {
-    width: 70%;
+    width: 95%;
+    height: 400px;
+    grid-column: 1/3;
+    grid-row: 2;
+    border: 1px solid;
+    justify-self: self-end;
 }
 .rodape {
     margin-top: 2rem;
     flex-direction: row;
+}
+.iniciar {
+    grid-column: 1/3;
+    grid-row: 2;
+    
 }
