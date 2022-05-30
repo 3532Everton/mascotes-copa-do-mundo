@@ -1,0 +1,128 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+.cabecalho {
+    background-image: url(../img/background-cabecalho.png);
+    background-size: 12%;
+    background-position: left;
+    background-position-x: 70%;
+    background-blend-mode: soft-light;
+}
+.cabecalho, .rodape {
+    background-color: #8E1337;
+    color: #ffffff;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cabecalho-titulo {
+    font-size: 34pt;
+}
+.cabecalho-subtitulo{
+    font-weight: 100;
+    font-size: 17pt;
+}
+.cabecalho-texto-complementar {
+    position: relative;
+    top: -10%;
+}
+.corpo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 8rem;
+    padding: 2em 4em;
+    width: 100%;
+}
+.apresentacao-titulo {
+    font-size: 22pt;
+    color: #800e30;
+    margin-left: 1.3em;
+}
+.menu-lateral {
+    width: 30%;
+    display: grid;
+    place-items: center;
+}
+.menu {
+    position: fixed;
+    /* top: 21.5rem; */
+    display: flex;
+    flex-direction: column;
+    background: #f50950;
+    border-radius: 3rem;
+    gap: 1rem;
+    padding: 0.3rem;
+}
+.menu-hamburguer {
+    border: 2px solid #ffffff;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.hamburguer {
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+.hamburguer::before, .hamburguer::after {
+    content: '';
+    height: 3px;
+    position: relative;
+    display: block;
+    background: #fff;
+    border-radius: 4px;
+}
+.hamburguer::after {
+    top: .2rem;
+}
+.hamburguer::before {
+    top: -.4rem;
+}
+.menu-lista {
+    border-radius: 2rem;
+    padding: 0;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-lista-item {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+}
+.item-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+.pagina-de-mascotes {
+    width: 70%;
+}
+.rodape {
+    margin-top: 2rem;
+    flex-direction: row;
+}
