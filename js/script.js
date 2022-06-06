@@ -2,6 +2,9 @@ const iniciar = document.getElementById('iniciar')
 const iniciarBtn = document.getElementById('iniciar-btn')
 const menu = document.getElementById('menu')
 const menuHamburguer = document.getElementById('menu-hamburguer')
+const menuItem = document.querySelectorAll('.menu-lista-item').forEach((item) =>{
+    
+})
 
 iniciarBtn.addEventListener('click', () => {
     menuHamburguer.addEventListener('click', () => {
@@ -21,6 +24,7 @@ iniciarBtn.addEventListener('click', () => {
         setTimeout(() => {
             menu.style.left = '3rem'
             menu.style.transition = '.5s'
+            iniciar.style.display = 'none'
         }, 2000)
     }, 100)
 })
